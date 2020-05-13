@@ -3,7 +3,7 @@ from PySide2.QtWidgets import QWidget,QVBoxLayout,QApplication,QBoxLayout, QGrid
 class Window(QWidget) :
     def __init__(self):
         QWidget.__init__(self)
-        self.setWindowTitle('IHM')
+        self.setWindowTitle('GUI')
         layout=QGridLayout()
 
         label=QLabel('Laisser un commentaire')
