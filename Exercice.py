@@ -1,9 +1,14 @@
-from PySide2 import QtWidgets
+from PySide2.QtWidgets import QWidget,QVBoxLayout,QApplication,QBoxLayout
 
 
-class Window(QtWidgets.QWidget) :
+class Window(QWidget) :
     def __init__(self):
-        a=QtWidgets.QLayout()
+        super(Window, self).__init__()
+        layout=QVBoxLayout()
+        for i in range (0,10) :
+            k=QWidget()
+            layout.addWidget(k)
+        self.setLayout(layout)
 
 
 
@@ -13,7 +18,7 @@ class Window(QtWidgets.QWidget) :
 
 
 if __name__ == "__main__":
-   app = Window([])
+   app = QApplication([])
    win = Window()
    win.show()
    app.exec_()
